@@ -1,7 +1,7 @@
 # OSAPP
 OnSite Appliance
 
-kickstart url: https://git.io/Jt8MR
+kickstart url: https://git.io/JtK7D
 
 temporary kickstart password is: 'raderChangeme!'
 
@@ -45,7 +45,7 @@ Network traffic is automatically collected and passed into Perch for analysis
 
 ## QuickStart ##
 1. Create CentOS (or equivalent) 8 boot flash
-2. Boot into the image, and edit the 'linux' line, adding 'inst.ks=https://git.io/Jt8MR' to the end
+2. Boot into the image, and edit the 'linux' line, adding 'inst.ks=https://git.io/JtK7D' to the end
 3. Press Ctrl-X to boot with these parameters
 4. After installation, browse to the Cockpit URL showing in the login motd.
 5. Run the 'Setup OSAPP' applet in there

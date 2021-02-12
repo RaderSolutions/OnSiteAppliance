@@ -62,6 +62,7 @@ echo "Rebooting"
 sshpass -p $password ssh -o StrictHostKeyChecking=no root@$opn_ip "shutdown -r now"
 sleep 20 
 while ! (ping $opn_ip -c 20) ; do echo offline ; sleep 1 ; done
+sleep 20
 
 sshpass -p $password ssh-copy-id -i /root/.ssh/id_rsa -o StrictHostKeyChecking=no root@$opn_ip
 

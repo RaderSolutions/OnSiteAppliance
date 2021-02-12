@@ -73,8 +73,7 @@ sshpass -p $password ssh-copy-id -i /root/.ssh/id_rsa -o StrictHostKeyChecking=n
 sshpass -p $password ssh root@10.10.20.3 "echo "$password" | passwd perch --stdin"
 sshpass -p $password ssh root@10.10.20.3 "echo "$password" | passwd prairiefire --stdin"
 
+rm -rf /tmp/perch
+
 echo -e "\nPlease complete the configuration wizard for the site."
 echo "ssh perch@10.$siteSubnet.20.3 "
-
-
-#rm -rf /tmp/perch

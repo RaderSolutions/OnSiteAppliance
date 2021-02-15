@@ -7,7 +7,7 @@ temporary kickstart password is: 'osapp-changeme'
 
 This builds an all-in-one appliance for a [mostly] Open Source network security stack for small offices. 
 
-Targeted hardware is the HPE Microserver Gen10Plus, but this can easily be expanded by altering the kickstart file. I chose this equipment because it is a very small form factor (about the size of a Dell/HP desktop PC), mostly silent, it takes up to 4 HDDs, 32GB RAM, a Quad Core Xeon processor, and has 4 on-board gigabit NICs with ports for 2 more PCI cards (10G capable).
+Targeted hardware is the HPE Microserver Gen10Plus, but this can easily be expanded by altering the kickstart file. I chose this equipment because it is a very small form factor (about the size of a Dell/HP desktop PC), mostly silent, it takes up to 4 HDDs, 32GB RAM, a Quad Core Xeon processor, and has 4 on-board gigabit NICs with ports for 2 more small form factor PCI cards (10G capable).
 
 The Operating System is RHEL/CentOS 8 or 8-Stream, booted up with the kickstart file in this repo (add inst.ks=https://git.io/JtK7D to the end of the kernel line on bootup)
 

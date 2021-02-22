@@ -12,6 +12,7 @@ Perch_URL=$9
 OPNSense_URL=${10}
 OPNSense_SHA256=${11}
 password=${12}
+cwa_LocID=${13}
 
 mkdir -p /etc/osapp 
 
@@ -38,6 +39,7 @@ Perch_URL=\"$Perch_URL\"
 OPNSense_URL=\"$OPNSense_URL\"
 OPNSense_SHA256=\"$OPNSense_SHA256\"
 snmpCommunity=\"radermonitor\"
+cwa_LocID=\"$cwa_LocID\"
 password=\"$password\"
 """ > $conf 
 
@@ -64,6 +66,9 @@ echo "Installing RPM Packages: $pkgs"
 dnf -y install $pkgs
 
 cat /dev/zero | ssh-keygen -t rsa -q -N ""
+
+# Set up Hypervisor
+/usr/local/osapp/install_labtech.sh
 
 # Set up Hypervisor
 /usr/local/osapp/host_setup/host_kvm_setup.sh || exit 1
